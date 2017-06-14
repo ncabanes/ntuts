@@ -6,7 +6,7 @@ This is an intro to the C programming language for programmers who have used pre
 
 In this preliminar section, we'll see the appearance of a simple C program and how to use it.
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -22,7 +22,7 @@ There are a few things to comment on this file:
  - "printf" is used to display a text on screen. The text must be specified between parenthesis and quotation marks. You must add the line "#include <stdio.h>" at the beginning of the program if you are going to use "printf"("stdio" is an abbreviation for "standard input/output").
  - Spaces and line breaks are not important, so the program might have been written (for example) this way:
 
-```
+```c
 #include <stdio.h>
 int main() { printf("Hello, world!"); return 0; }
 ```
