@@ -4,7 +4,7 @@
 
 The most common loop is probably the "for" loop, used mostly to "count". In languages such as BASIC, its syntax is very easy to follow:
 
-```basic
+```visualbasic
 FOR i = 1 TO 10: PRINT i: NEXT i
 ```
 
