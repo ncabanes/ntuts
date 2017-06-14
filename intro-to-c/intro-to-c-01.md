@@ -6,26 +6,26 @@ You will need variables to store values entered by the user. For example, "int x
 
 If you want to display the value of a variable, you have to use a "format specifier". For example, the format specifier for an integer number is "%d":  
 
-```
+```c
 printf("%d", x);
 ```
 
 This allows mixing text and data:
 
-```
+```c
 printf("The result is %d", x);
 ```
 
 When you ask the user for values, the format is very similar, but the variable name must be preceded with "&":
 
-```
+```c
 scanf("%d", &x);  
 ```
 
 
 And you can add comments to the code , delimited between /* and */
 
-```
+```c
 /* Contact with the C language */
 ```
 
@@ -34,7 +34,7 @@ And you can add comments to the code , delimited between /* and */
 
 So a program to sum two numbers entered by the user might be like this:
 
-```
+```c
 /* Contact with the C language */
 
 #include <stdio.h>
