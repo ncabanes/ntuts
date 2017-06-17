@@ -34,4 +34,4 @@ int main()
 
 #### Suggested exercises:
 
-- C.04.01. Ask the user for integer numbers. You must display each number squared. Your program end when the program entered is 0. Use then entered number as exit condition.
+- C.03.01. Ask the user for integer numbers. You must display each number squared. Your program end when the program entered is 0. Use then entered number as exit condition.
