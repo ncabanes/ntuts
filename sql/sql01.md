@@ -51,7 +51,7 @@ inside ellipses, and underlining the primary key (this format is more common
 for the starting "conceptual" design, while the previous format is more usual 
 for the "real" implementation of the design using tables):
 
-![](sql01c-drivers1a.png)
+![](sql01d-drivers1b.png)
 
 
 (Note: the first diagram was created using [draw.io](https://www.draw.io/)
