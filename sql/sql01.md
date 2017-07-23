@@ -9,7 +9,7 @@ uncompress, actually) a portable system including MySQL, Apache, PHP and a few
 other tools. This system will be active only when you want it to, so it will 
 not make your computer slower.
 
-![](uniformServer.png)
+![](sql01a-uniformServer.png)
 
 Our first command would be to create a new database, in which we will store
 data about car races. We will call it "races", so we should use the command:
@@ -29,7 +29,7 @@ a real installation, just uncompressing in a specific folder), you can start
 MySQL server and click on the button which read "MySQL console", so these
 steps would look like this:
 
-![](db01-mySQL.png)
+![](sql01b-mySQL.png)
 
 We will create only one block of information at this point. Each block of 
 information will be called a "**table**". Our first table will hold data about 
@@ -40,6 +40,23 @@ Also, we need something to allow us distinguish one driver from another, even
 if both have the same name and surname, so we will include and additional 
 field, an "id" (identifier) for each driver. This field which can identify
 one driver from another is what we are going to call a "**primary key**".
+
+There are several ways to represent a table. A very common and compact one
+is in a rectangle, in which the first row is the name of the table:
+
+![](sql01c-drivers1a.png)
+
+A less compact and more "classic" way is detailing the fields ("attributes") 
+inside ellipses, and underlining the primary key (this format is more common 
+for the starting "conceptual" design, while the previous format is more usual 
+for the "real" implementation of the design using tables):
+
+![](sql01c-drivers1a.png)
+
+
+(Note: the first diagram was created using [draw.io](https://www.draw.io/)
+and the second one with [ERDplus](https://erdplus.com/#/standalone). Both are
+online tools which can be used freely).
 
 We must also specify which kind of information will be stored in each of these 
 fields. The most usual is text, up to a certain amount of letters. This data 
