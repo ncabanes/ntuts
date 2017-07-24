@@ -9,7 +9,7 @@ system and compiler), as the standard only defines minimums.
 Because of this, the following program will give different results depending
 on the compiler and operating system used:
 
-```
+```c
 /* Size of data depends on the implementation */
 
 #include <stdio.h>
@@ -30,7 +30,7 @@ int main()
 
 For example, this is the output with GCC 4.8.2 running on Linux 64 bit
 
-```
+```txt
 sizeof(char) = 1
 sizeof(short) = 2
 sizeof(int) = 4
@@ -44,7 +44,7 @@ sizeof(long double) = 16
 
 And this is the output for Turbo C 2.01 (MS-DOS, 16 bit):
 
-```
+```txt
 sizeof(char) = 1
 sizeof(short) = 2
 sizeof(int) = 2
@@ -63,4 +63,4 @@ you should be able to store values from (approximately) -2,000,000,000 to
 
 #### Suggested exercises:
 
-- C.05.01. Ask the user for two integer numbers and display their sum. . You must display each number squared. Your program end when the program entered is 0. Use then entered number as exit condition.
+- C.05.01. Ask the user for two integer numbers and display their sum. You must display each number squared. Your program end when the program entered is 0. Use then entered number as exit condition.

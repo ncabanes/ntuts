@@ -23,7 +23,7 @@ scanf("%d", &x);
 ```
 
 
-And you can add comments to the code , delimited between /* and */
+And you can add comments to the code , delimited between /\* and \*/
 
 ```c
 /* Contact with the C language */

@@ -2,9 +2,18 @@
 
 ## 4. Conditions
 
+If you have used any language derived from C (such as Java, C++, C#, PHP 
+or Javascript), you know almost everythingh you need to know, because the
+syntax is the same, and in the last session you discovered that there is
+no "boolean" data type, so the conditions are interpreted as integer numbers
+(0=false).
+
+If you come from other languages, such as Pascal, the C syntax may seem a bit
+strange to you, so let's have a look:
+
 Simple conditions can be checked with "if (condition) sentence;", as in this example:
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -18,7 +27,7 @@ int main()
 
 We can tell what should be done if the condition is no true, with "else":
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -32,10 +41,10 @@ int main()
 }
 ```
 
-Alsso, we might need to check several conditions at a time, joined with "and"
+Also, we might need to check several conditions at a time, joined with "and"
 (&&), "or" (||) and "not" (!), as in this example:
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -61,7 +70,7 @@ A common expression is "if (condition) x = a ; else x = b;", which can be shorte
 with the "ternary operator" or "conditional operator": "x = (condition) ? a : b", 
 as in this example:
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -87,7 +96,7 @@ int main()
 If a single variable may have several different values, we might prefer to
 use "switch":
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -108,7 +117,7 @@ int main()
 
 So a complete example might look like this:
 
-```
+```c
 /* Conditions */
 
 #include <stdio.h>
