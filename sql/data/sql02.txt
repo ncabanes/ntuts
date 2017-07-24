@@ -1,0 +1,97 @@
+Warning: Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1
+Server version: 5.6.35 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use races;
+Database changed
+mysql> alter table drivers add num numeric(3) after name;
+Query OK, 0 rows affected (0.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from drivers;
++------+------------------+------+----------+
+| id   | name             | num  | teamName |
++------+------------------+------+----------+
+| lham | Lewis Hamilton   | NULL | Mercedes |
+| svet | Sebastian Vettel | NULL | Ferrari  |
++------+------------------+------+----------+
+2 rows in set (0.00 sec)
+
+mysql> update drivers set num = 5 where id = 'svet';
+Query OK, 1 row affected (0.44 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update drivers set num = 44 where id = 'lham';
+Query OK, 1 row affected (0.11 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select name, num from drivers where id = 'svet';
++------------------+------+
+| name             | num  |
++------------------+------+
+| Sebastian Vettel |    5 |
++------------------+------+
+1 row in set (0.00 sec)
+
+mysql> select drivers.name from drivers where name like '%ham%';
++----------------+
+| name           |
++----------------+
+| Lewis Hamilton |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select teamName from drivers where num > 2;
++----------+
+| teamName |
++----------+
+| Mercedes |
+| Ferrari  |
++----------+
+2 rows in set (0.00 sec)
+
+mysql> select distinct(teamName) from drivers where num > 2;
++----------+
+| teamName |
++----------+
+| Mercedes |
+| Ferrari  |
++----------+
+2 rows in set (0.32 sec)
+
+mysql> select * from drivers order by teamName;
++------+------------------+------+----------+
+| id   | name             | num  | teamName |
++------+------------------+------+----------+
+| svet | Sebastian Vettel |    5 | Ferrari  |
+| lham | Lewis Hamilton   |   44 | Mercedes |
++------+------------------+------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from drivers order by teamName asc, name desc;
++------+------------------+------+----------+
+| id   | name             | num  | teamName |
++------+------------------+------+----------+
+| svet | Sebastian Vettel |    5 | Ferrari  |
+| lham | Lewis Hamilton   |   44 | Mercedes |
++------+------------------+------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select min(num) from drivers;
++----------+
+| min(num) |
++----------+
+|        5 |
++----------+
+1 row in set (0.10 sec)
+
+mysql>
