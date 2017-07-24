@@ -15,23 +15,22 @@ int main()
     
     do
     {
-		printf("%d ", i);
-		i--;
-	}
-	while(i);      /* 0 = false */
-	
-	printf("\n");  /* new line */
-	
-	while(1)
-	{
-		           /* endless loop! */
-	}
+        printf("%d ", i);
+        i--;
+    }
+    while(i);      /* 0 = false */
+    
+    printf("\n");  /* new line */
+    
+    while(1)
+    {
+                   /* endless loop! */
+    }
 
     return 0;
 }
-
 ```
 
 #### Suggested exercises:
 
-- C.03.01. Ask the user for integer numbers. You must display each number squared. Your program end when the program entered is 0. Use then entered number as exit condition.
+- C.03.01. Ask the user for integer numbers. You must display each number squared. Your program will finish when the program entered is 0. Use then entered number as exit condition.

@@ -28,6 +28,11 @@ int main() { printf("Hello, world!"); return 0; }
 ```
 
 
-¿And how can you **test** it? The recommended way is using Linux + Geany, wheter in a "real" machine or a virtual machine. Most Linux versions include a C compiler preinstalled, and you can easily install an editor named "Geany", from which you can compile a program and run it just clicking a button.
+And how can you **test** it? The recommended way is using Linux + Geany, whether in a "real" machine or a virtual machine. Most Linux versions include a C compiler preinstalled, and you can easily install an editor named "Geany", from which you can compile a program and run it just clicking a button.
 
 Try it!
+
+
+#### Suggested exercises:
+
+- C.00.01. Create a C program to display your name, instead of "Hello, world!".

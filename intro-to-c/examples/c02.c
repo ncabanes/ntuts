@@ -12,7 +12,8 @@ int main()
     /* 
     Note:
     Most C compilers do not allow "for(int i=1;...")
-    (notation introduced in C99)
+    (notation introduced in C99) and the variable "i"
+    must be declared before the loop
     */
 
     return 0;

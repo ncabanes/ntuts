@@ -41,9 +41,17 @@ int main()
     /* 
     Note:
     Most C compilers do not allow "for(int i=1;...")
-    (notation introduced in C99)
+    (notation introduced in C99) and the variable "i"
+    must be declared before the loop
     */
 
     return 0;
 }
 ```
+
+
+#### Suggested exercises:
+
+- C.02.01. Display the odd numbers from 1 to 19 (hint: the increment will be "i=i+2", which can be shortened as "i+=2").
+
+- C.02.02. Display a countdown from 10 to 0 (hint: the decrement will be "i=i-1", or "i--").

@@ -15,6 +15,6 @@ int main()    /* Body of the program */
     sum = firstNumber + secondNumber;       /* Calculations using variables */
     printf("Their sum is %d", sum);         /* Displaying text and data */
 
-    return 0;                              /* End of the program */
+    return 0;                               /* End of the program */
 }  
 

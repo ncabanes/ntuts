@@ -8,17 +8,17 @@ int main()
     
     do
     {
-		printf("%d ", i);
-		i--;
-	}
-	while(i);      /* 0 = false */
-	
-	printf("\n");  /* new line */
-	
-	while(1)
-	{
-		           /* endless loop! */
-	}
+        printf("%d ", i);
+        i--;
+    }
+    while(i);      /* 0 = false */
+    
+    printf("\n");  /* new line */
+    
+    while(1)
+    {
+                   /* endless loop! */
+    }
 
     return 0;
 }

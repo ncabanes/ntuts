@@ -52,6 +52,16 @@ int main()    /* Body of the program */
     sum = firstNumber + secondNumber;       /* Calculations using variables */
     printf("Their sum is %d", sum);         /* Displaying text and data */
 
-    return 0;                              /* End of the program */
+    return 0;                               /* End of the program */
 }  
 ```
+
+
+#### Suggested exercises:
+
+- C.01.01. Ask the user for two integer numbers and display their product (hint: the operator for the multiplicacion is "*").
+
+- C.01.02. Ask the user for two integer numbers and display their division (note: the operator is "/" and result will be also an integer number, with no decimal digits).
+
+- C.01.03. Ask the user for two integer numbers and display the remainder of their division, which is obtained using the "modulus" operator, "%": x % y is the remainder of dividing x by y.
+
