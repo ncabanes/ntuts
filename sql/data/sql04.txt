@@ -1,0 +1,74 @@
+Warning: Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1
+Server version: 5.6.35 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database races3;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use races3;
+Database changed
+
+mysql> create table drivers (
+    ->   id varchar(10) primary key,
+    ->   name varchar(40)
+    -> );
+Query OK, 0 rows affected (0.22 sec)
+
+mysql> create table teams (
+    ->   id varchar(2) primary key,
+    ->   name varchar(30)
+    -> );
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> create table driveFor (
+    ->   driverId varchar(10),
+    ->   teamId varchar(2),
+    ->   startDate date,
+    ->   endDate date,
+    ->   primary key (driverId, teamId, startDate),
+    ->   foreign key (teamId) references teams(id),
+    ->   foreign key (driverId) references drivers(id)
+    -> );
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> insert into teams values ('f', 'Ferrari');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into teams values ('m', 'Mercedes');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into drivers values ('svet', 'Sebastian Vettel');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into drivers values ('lham', 'Lewis Hamilton');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into driveFor values ('svet', 'f', '2015-10-01', null);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into driveFor values ('lham', 'M', '2016-10-01', null);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select drivers.name as driverName, teams.name as teamName
+    -> from drivers, teams, driveFor
+    -> where teams.id = driveFor.teamId
+    -> and drivers.id = driveFor.driverId
+    -> order by driverName;
++------------------+----------+
+| driverName       | teamName |
++------------------+----------+
+| Lewis Hamilton   | Mercedes |
+| Sebastian Vettel | Ferrari  |
++------------------+----------+
+2 rows in set (0.11 sec)
+
+mysql>
