@@ -31,7 +31,46 @@ description, for the exercises which have not been solved yet.
 - Display the amount of exercises for each difficulty level.
 
 
-#### Exercise 6.2: Two tables
+#### Exercise 6.2: Beaches, two entities
+
+Now let's create a database to store information about beaches we want to 
+visit. To avoid repetitions, we'll use two entities: one of them will be for 
+the countries (id, name), and the other will be for the beaches (id, name, 
+comments, website, visited or not). The will be linked by a one-to-many 
+relationship (each beach belongs to a country, each country may have several 
+beaches we are interested in).
+
+First draw the entity-relationship diagram. Then create the database and the 
+tables. Add data for 2 countries, one with 2 beaches and another with 3 beaches.
+Then create the SQL statements for the following requests:
+
+- Display all the beaches (name and website), sorted by name.
+
+- Display all the beaches (name of the beach, name of the country and website), 
+sorted by name of the country and then by name of the beach.
+
+- Display the names of the countries and the amount of beaches each country
+has.
+
+- Display the beaches which you have visited (name of the beach and name of the 
+country), but for which you have not written a comment.
+
+- Add a new country, with no beaches (yet) in it. Now display the names of the 
+countries and the amount of beaches each country has, even for the countries 
+for which we have no beaches (so a zero will be displayed).
+
+- Display the names of the countries and the amount of beaches each country
+has, but only for the countries with three or more beaches.
+
+- Display all the beaches (name and country name), which contain an "a" in its
+name and belong to a country whose name starts with "s", sorted by id.
+
+- Display all the beaches (name and country name), for which the website has
+not been specified (either it is totally empty or it has a length of less than 5 characters).
+
+
+
+#### Exercise 6.3: Many-to-many
 
 (Tomorrow)
 
