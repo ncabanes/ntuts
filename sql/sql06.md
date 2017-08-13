@@ -72,5 +72,49 @@ not been specified (either it is totally empty or it has a length of less than 5
 
 #### Exercise 6.3: Many-to-many
 
+Now we want to store information about actors we like and movies they have been
+in. For each actor / actress we want their name, birth year and the file name 
+of their picture. For each movie, we want the title, the year and the (main) 
+genre, such as "comedy", "sci-fi" or "horror". Of course, we'll need ids for both
+entitities. They are linked by a many-to-many relationship: there can be several
+(or even none) actores / actresses in a movie, and an actor / actress can take
+part in several movies.
+
+Create the entity-relationship diagram. Implement the database and the 
+tables. Add the following data: 
+
+Actors: Leonardo DiCaprio (1974), Ellen Page (1987), Christian Bale (1974),
+Heath Ledger (1979), Maggie Gyllenhaal (1977), Humphrey Bogart (1899).
+
+Movies: Inception (2010, DiCaprio and Page), Koyaanisqatsi (1982, no actors),
+The Dark Knight (2008, Bale, Ledger and Gyllenhaal).
+
+Then create the SQL statements for the following requests:
+
+- Display all the actors and actresses (name and birth year), sorted from
+youngest to oldest.
+
+- Display all the actors which have participated in movies (name of the actor, 
+title of the movie, year of the movie), sorted by name of the actor and then by 
+name of the movie. In this list, Humphrey Bogart will not be shown, as we have
+no information (yet) aboyt any movie of his.
+
+- Display all the actors and the movies theyw have participated in, if any 
+(name of the actor, a movie, year of the movie), sorted by name of the actor 
+and then by year of the movie. In this list, Humphrey Bogart will be shown, but 
+no movie will be displayed with him, as we have no information (yet) aboyt any 
+movie of his.
+
+- Update the table "actors", adding a new field, the year they died (if they
+are not alive). Also update a few data: Bogart died in 1957, Ledger died in 2008.
+
+- Display the titles of the movies and the amount of actors in them, sorted
+by title.
+
+- Display the titles of the movies with no actors.
+
+
+#### Exercise 6.4: A short complete example
+
 (Tomorrow)
 
