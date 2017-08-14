@@ -72,13 +72,13 @@ not been specified (either it is totally empty or it has a length of less than 5
 
 #### Exercise 6.3: Many-to-many
 
-Now we want to store information about actors we like and movies they have been
+Now we want to store information about actors we like and movies they have been 
 in. For each actor / actress we want their name, birth year and the file name 
 of their picture. For each movie, we want the title, the year and the (main) 
-genre, such as "comedy", "sci-fi" or "horror". Of course, we'll need ids for both
-entitities. They are linked by a many-to-many relationship: there can be several
-(or even none) actores / actresses in a movie, and an actor / actress can take
-part in several movies.
+genre, such as "comedy", "sci-fi" or "horror". Of course, we'll need ids for 
+both entitities. They are linked by a many-to-many relationship: there can be 
+several (or even none) actores / actresses in a movie, and an actor / actress 
+can take part in several movies.
 
 Create the entity-relationship diagram. Implement the database and the 
 tables. Add the following data: 
@@ -115,6 +115,41 @@ by title.
 
 
 #### Exercise 6.4: A short complete example
+
+Now we will implement a database for the library of a High School. We want to
+store information about books (id, title, author, year, pages), users (id,
+name), roles of the users (such as "student" or "teacher") and borrowings
+(each user may borrow one or several books at a time, and we want to store
+the date in which they borrowed the book, the expected return date and the
+real return date, which may differ). Of course, each user may borrow a book
+several times (in different moments).
+
+First draw the entity-relationship diagram. Then create the database and the 
+tables, and also add a few example data. Then create the SQL statements for the 
+following requests:
+
+- Display all the books, sorted by title and author.
+
+- Display all the users (user name and name of their role).
+
+- Display the list of users who have borrowed any book, as well as the name
+of the books they have taken (name, title, date borrowed, date returned).
+
+- Display the list of books which have not been returned yet, as well as
+the name and id of the users who have them.
+
+- Display the list of books and the amount of times each book has been borrowed.
+
+- Display book which has been borrowed most times.
+
+- Display the names of the users who have returned books late (name, title of 
+the book).
+
+- Display the names of the users who have returned books late more than once 
+(name of the user, amount ot late returns).
+
+
+#### Exercise 6.5: A longer complete example
 
 (Tomorrow)
 
