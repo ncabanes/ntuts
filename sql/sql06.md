@@ -151,5 +151,27 @@ the book).
 
 #### Exercise 6.5: A longer complete example
 
-(Tomorrow)
+Finally, let's implement a more complex information system. It will be used
+for the billing system of a small factory. In a first approach, there will be: 
 
+- Products (id, name, manufacturing cost, selling price)
+
+- Customers (id, name, address, city, zip code, country, phone number,
+email, contact person).
+
+- Bills. Each bill will be made for a customer, it will have a number (which 
+will start with 1 at the beginning of each year). Each bill will contain 
+serveral "lines". Each Line will be for one type of product that the customer 
+has bought, and include also the amount of products sold to them in this bill.
+
+If you are feeling adventurous, you may also include an extra detail: each 
+product is made by a certain amount of raw materials, which we buy from our 
+providers. Each raw material can be obtained from different providers at 
+different prices. We should we able to make orders to those providers, each 
+order consisting of several raw materials (its structure would be similar to 
+that of the bills).
+
+Once again, you should be able to create the entity-relationship diagram, 
+implement the system using tables, add data to it and obtain information (but 
+this time, the queries to make to the system are up to you; just try to make 
+them as real as possible).
